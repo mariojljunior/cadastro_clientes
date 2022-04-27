@@ -14,6 +14,11 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return 'API REST com ' . $router->app->version();
 });
 
+$router->group(['prefix' => 'clientes'], function() use($router){
+    $router->get('/', 'ClientesController@index');
+
+    
+});
