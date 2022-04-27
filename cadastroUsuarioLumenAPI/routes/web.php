@@ -18,7 +18,13 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'clientes'], function() use($router){
-    $router->get('/', 'ClientesController@index');
 
-    
+    $router->get('/', 'ClientesController@index');
+    $router->get('/{cliente}', 'ClientesController@show');
+
+    $router->post('/','ClientesController@store');
+
+    $router->put('/{cliente}', 'ClientesController@update');
+
+    $router->delete('/{cliente}', 'ClientesController@destroy');
 });
