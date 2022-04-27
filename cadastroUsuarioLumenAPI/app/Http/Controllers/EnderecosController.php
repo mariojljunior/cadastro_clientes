@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Endereco;
 use Illuminate\Http\Request;
 
 class EnderecosController extends Controller
@@ -11,7 +12,7 @@ class EnderecosController extends Controller
     /**
      * @return void
      */
-    public function __construct(Cliente $cliente)
+    public function __construct(Endereco $endereco)
     {
         $this->endereco = $endereco;
     }

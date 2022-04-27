@@ -28,3 +28,16 @@ $router->group(['prefix' => 'clientes'], function() use($router){
 
     $router->delete('/{cliente}', 'ClientesController@destroy');
 });
+
+$router->group(['prefix' => 'enderecos'], function() use($router){
+
+    $router->get('/', 'EnderecosController@index');
+    $router->get('/{endereco}', 'EnderecosController@show');
+
+    $router->post('/','EnderecosController@store');
+
+    $router->put('/{endereco}', 'EnderecosController@update');
+
+    $router->delete('/{endereco}', 'EnderecosController@destroy');
+});
+
