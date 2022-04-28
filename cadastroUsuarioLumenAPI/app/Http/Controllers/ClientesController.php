@@ -19,7 +19,7 @@ class ClientesController extends Controller
 
     public function index()
     {
-        return $this->cliente;
+        return $this->cliente::all();
     }
 
     public function show($cliente)

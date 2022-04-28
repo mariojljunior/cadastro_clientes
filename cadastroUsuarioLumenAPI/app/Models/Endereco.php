@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Endereco extends Model
 {
     protected $table = 'enderecos';
+    protected $primaryKey = 'id_endereco';
+    public $timestamps = false;
 
     /**
      * @var string[]

@@ -19,7 +19,7 @@ class EnderecosController extends Controller
 
     public function index()
     {
-        return $this->endereco;
+        return $this->endereco::all();
     }
 
     public function show($endereco)
